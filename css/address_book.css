@@ -1,0 +1,307 @@
+body {
+   
+ margin:0px;
+
+}
+
+
+
+.entire_book {
+   
+	 position:relative;
+	    
+	 width:960px;
+	    
+	 margin:auto;
+
+	 margin-top: 40px;
+	 margin-bottom: 20px;
+}
+
+
+
+
+.title {
+   
+padding:10px;
+   
+border-bottom:2px solid;
+    
+background: #61949D;
+
+}
+
+
+
+.title h1 {
+    
+margin:0px;
+    
+font-family:Monoton;
+    
+font-weight:light;
+   
+text-shadow:0px 0px 1px rgba(0,0,0,0.4);
+color: white;
+}
+
+
+
+.quickadd {
+    
+padding:9px;
+   
+border-bottom:1px solid;
+
+}
+
+
+
+#quick_add {
+    
+padding:8px;
+    
+background: #2D9CDB;
+    
+border:1px double;
+   
+text-shadow:0px 0px 1px;
+
+text-align: center;
+color: white;
+}
+
+
+
+.add_form {
+    
+height:500px;
+    
+padding:10px;
+   
+background: #61949D;
+    
+overflow:hidden;
+   
+display: none;
+
+}
+
+
+
+.add_form label {
+   
+position:relative;
+    
+display:block;
+    
+width:300px;
+   
+height:10px;
+  
+float:left;
+   
+font-family:Monoton;
+    
+font-size:20px;
+    
+padding:10px;
+    
+font-weight:bold;
+
+color: white;
+}
+
+
+
+.add_form input,textarea {
+    
+border:1px double;
+    
+width:50%;
+   
+padding:10px;
+    
+font-weight: bold;
+   
+border-radius:5px;
+    
+box-shadow:inset 0px 0px 10px rgba(0,0,0,0.2);
+
+}
+
+
+
+#add,#cancel {
+   
+padding:10px;
+   
+margin:20px;
+    
+position:relative;
+    
+left:300px;
+    
+border:1px double;
+    
+border-radius:5px;
+    
+font-weight:bold;
+
+background: #2D9CDB;
+color: white;
+}
+
+#cancel {
+background: red;
+}
+
+
+
+.entry {
+    
+background: #1FDFA4;
+   
+width:990px;
+   
+height:80px;
+    
+border-bottom:1px solid;
+
+color: white;
+font-weight: bold;
+}
+
+
+
+
+.entry .add_name {
+    
+width:130px;
+    
+float:left;
+    
+padding:11px;
+
+}
+
+
+
+.entry .add_email {
+    
+width:200px;
+    
+float:left;
+    
+padding:11px;
+
+}
+
+
+
+
+.entry .add_phone {
+    
+width:100px;
+    
+float:left;
+    
+padding:11px;
+
+}
+
+
+
+.entry .add_address {
+    
+width:250px;
+    
+float:left;
+   
+ padding:11px;
+
+}
+
+
+
+.entry .add_relationship {
+    
+width:100px;
+    
+float:left;
+    
+padding:7px;
+
+}
+
+
+.entry .del {
+   
+width:30px;
+float:left;
+padding:9px;
+height: 50px;
+
+}
+
+.entry .edit {
+	width: 20px;
+	float:left;
+	padding: 8px;
+	height: 50px;
+}
+
+
+
+.entry p {
+    
+margin:0px;
+    
+font-family:Monoton;
+    
+font-size:14px;
+    
+text-shadow:0px 0px 1px rgba(0,0,0,0.4);
+
+}
+
+
+
+.entry .del a {
+    
+font-family:Monoton;
+    
+color:#FFF;
+    
+font-size:12px;
+    
+padding:6px;
+    
+background:rgb(255,100,100);
+   
+border-radius:9px;
+    
+text-decoration:none;
+}
+
+.entry .edit a {
+font-family:Monoton;
+    
+color:#FFF;
+    
+font-size:12px;
+    
+padding:6px;
+    
+background:#40C23C;
+   
+border-radius:9px;
+    
+text-decoration:none;
+}
+
+
+button:hover {
+	cursor: pointer;
+}
+
