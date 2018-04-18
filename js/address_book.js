@@ -71,7 +71,6 @@ window.onload = function(){
 			// formating the input into a valid JSON structure
 			var obj = new jsonStructure(fullname.value,phone.value,address.value,relationship.value,email.value);
 			addressBook.push(obj);
-			localStorage['add_book'] = JSON.stringify(addressBook);
 			//This removes the input form
 			addFormDiv.style.display = "none";
 			showAddressBook();
@@ -86,7 +85,6 @@ window.onload = function(){
 		if(y.target.classList.contains('delbutton')){
 			var remID = y.target.getAttribute('data-id');
 			addressBook.splice(remID,1);
-			localStorage['add_book'] = JSON.stringify(addressBook);
 			showAddressBook();
 
 		}
@@ -96,9 +94,28 @@ window.onload = function(){
 		//edit entry
 		if(o.target.classList.contains('editbutton')){
 			var edtId = o.target.getAttribute('data-id');
-			addressBook.splice(edtId,1);
-			localStorage['add_book'] = JSON.stringify(addressBook);
+			var editName = document.querySelectorAll('.edit_name');
+			for(var i in editName){
+				editName[i].value = addressBook[edtId].fullname;
+			}
+			var editPhone = document.querySelectorAll('.edit_phone')
+			for(var i in editPhone){
+				editPhone[i].value = addressBook[edtId].phone;
+			}
+			var editAddress = document.querySelectorAll('.edit_address');
+			for(var i in editAddress){
+				editAddress[i].value = addressBook[edtId].address;
+			}
+			var editRelationship = document.querySelectorAll('.edit_relationship');
+			for(var i in editRelationship){
+				editRelationship[i].value = addressBook[edtId].relationship;
+			}
+			var editEmail = document.querySelectorAll('.edit_email');
+			for(var i in editEmail){
+				editEmail[i].value = addressBook[edtId].email;
+			}
 			addFormDiv.style.display = "block";
+			addressBook.splice(edtId,1);
 			showAddressBook();
 			
 
@@ -109,10 +126,26 @@ window.onload = function(){
 
 	//This clears the form after it has been submitted
 	function clearForm(){
-		var formFields = document.querySelectorAll('.form_fields');
-		for(var i in formFields){
-			formFields[i].value = '';
-		}
+		var editName = document.querySelectorAll('.edit_name');
+			for(var i in editName){
+				editName[i].value = '';
+			}
+			var editPhone = document.querySelectorAll('.edit_phone')
+			for(var i in editPhone){
+				editPhone[i].value = '';
+			}
+			var editAddress = document.querySelectorAll('.edit_address');
+			for(var i in editAddress){
+				editAddress[i].value = '';
+			}
+			var editRelationship = document.querySelectorAll('.edit_relationship');
+			for(var i in editRelationship){
+				editRelationship[i].value = '';
+			}
+			var editEmail = document.querySelectorAll('.edit_email');
+			for(var i in editEmail){
+				editEmail[i].value = '';
+			}
 	}
 	
 	
@@ -120,10 +153,10 @@ window.onload = function(){
 	
 
 	function showAddressBook(){
-		if(localStorage['add_book'] === undefined){
-			localStorage['add_book'] = '[]';
+		if(addressBook === undefined){
+			addressBook = '[]';
 		} else {
-			addressBook = JSON.parse(localStorage['add_book']);
+			addressBook;
 			// Loop over the array addressBook and insert into the page
 			addBookDiv.innerHTML = '';
 			for(var n in addressBook){
